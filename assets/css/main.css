@@ -98,14 +98,22 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+	/*
 	body {
 		background-color: #935d8c;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-	}
+	}*/
 
+	body {
+		background-image: url("images/background_wave.webp");
+    background-size: contain;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-blend-mode: overlay;
+	}
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
@@ -119,10 +127,12 @@ input, select, textarea {
 
 /* Type */
 
+	/*
 	body {
 		background-color: #935d8c;
 		color: rgba(255, 255, 255, 0.65);
 	}
+	*/
 
 	body, input, select, textarea {
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -170,7 +180,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 	em, i {
@@ -194,7 +204,7 @@ input, select, textarea {
 		}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
 		letter-spacing: -0.025em;
@@ -2516,6 +2526,7 @@ input, select, textarea {
 			justify-content: center;
 			width: 100%;
 			margin-left: 0;
+			margin-bottom: unset;
 		}
 
 			ul.actions.special li:first-child {
@@ -3086,11 +3097,12 @@ input, select, textarea {
 		}
 
 		#header.alt {
-			padding: 7em 5em 4em 5em ;
+			padding: 2em 0em 2em 0em ;
 		}
 
 			#header.alt h1 {
 				font-size: 3.25em;
+				font-weight: 600;
 			}
 
 			#header.alt > * {
@@ -3115,7 +3127,7 @@ input, select, textarea {
 				-ms-transition-delay: 0s;
 				transition-delay: 0s;
 				display: block;
-				margin: 0 0 1.5em 0;
+				margin: 0 0 0 0;
 			}
 
 				#header.alt .logo img {
@@ -3131,7 +3143,7 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 6em 4em 3em 4em ;
+					padding: 0em 0em 0em 0em ;
 				}
 
 		}
@@ -3143,7 +3155,7 @@ input, select, textarea {
 			}
 
 				#header.alt {
-					padding: 5em 3em 2em 3em ;
+					padding: 0em 0em 0em 0em ;
 				}
 
 		}
@@ -3220,7 +3232,7 @@ input, select, textarea {
 		position: absolute;
 		width: 64em;
 		max-width: calc(100% - 4em);
-		padding: 1em;
+		padding: 0.3em;
 		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
 		border-top-right-radius: 0.25em;
@@ -3258,7 +3270,7 @@ input, select, textarea {
 		}
 
 		#nav + #main {
-			padding-top: 4.25em;
+			padding-top: 3.5em;
 		}
 
 		#nav ul {
@@ -3353,6 +3365,7 @@ input, select, textarea {
 
 		#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
 			color: #636363;
+			font-weight: 450;
 		}
 
 		#main blockquote {
@@ -3421,7 +3434,7 @@ input, select, textarea {
 				#main input[type="button"].primary:hover,
 				#main button.primary:hover,
 				#main .button.primary:hover {
-					background-color: #9acff2;
+					background-color: #6897b3;
 				}
 
 				#main input[type="submit"].primary:active,
@@ -3429,7 +3442,7 @@ input, select, textarea {
 				#main input[type="button"].primary:active,
 				#main button.primary:active,
 				#main .button.primary:active {
-					background-color: #7ec3ee;
+					background-color: #e17eee;
 				}
 
 				#main input[type="submit"].primary.icon:before,
@@ -3581,8 +3594,8 @@ input, select, textarea {
 		}
 
 		#main > .main {
-			padding: 5em 5em 3em 5em ;
-			border-top: solid 1px #dddddd;
+			padding: 1em 5em 3em 5em ;
+			/*border-top: solid 1px #dddddd;*/
 		}
 
 			#main > .main:first-child {
@@ -3783,3 +3796,82 @@ input, select, textarea {
 			}
 
 		}
+
+.founders-container {
+	display: flex;
+	justify-content: space-around;
+	/* Distributes space evenly around the items */
+	align-items: center;
+	/* Vertically centers the items if they're of different heights */
+	flex-wrap: wrap;
+	/* Allows items to wrap if needed */
+}
+
+.founder {
+	flex-basis: 30%;
+	/* Gives each founder div a base width but allows flexibility */
+	text-align: center;
+	/* Centers the text and content within each founder div */
+  margin: 20px 10px; /* Reduce horizontal margin to bring items closer */
+	/* Adds some space around each founder for better separation */
+	display: flex;
+	flex-direction: column;
+	/* Stacks the content vertically */
+	justify-content: center;
+	/* Centers content vertically within each founder div */
+	align-items: center;
+	/* Centers content horizontally */
+}
+
+.founder-photo img {
+	border: 3px solid #ddd;
+	/* Light grey border */
+	border-radius: 50%;
+	/* Makes the image round */
+	width: 150px;
+	/* Specifies the width */
+	height: 150px;
+	/* Specifies the height, equal to width for a perfect circle */
+	object-fit: cover;
+	/* Ensures the image covers the area, good for different aspect ratios */
+	display: block;
+	/* Ensures the image is properly block level for better control */
+	margin: 10px auto;
+	/* Centers the image and gives some spacing around */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	/* Adds a subtle shadow for depth */
+}
+
+#header .header-inner {
+	display: flex;
+	align-items: center;
+	/* Center items vertically */
+	justify-content: center;
+	/* Space between the logo and the header text */
+}
+
+#header .logo {
+	flex: 0 0 auto;
+	/* Do not grow, do not shrink, initial based on content size */
+	width: 30%;
+	/* Adjust as needed */
+}
+
+@keyframes color-change {
+	0% {
+		color: white;
+	}
+
+	50% {
+		color: #63fffc;
+	}
+
+	100% {
+		color: white;
+	}
+}
+
+#changing-text {
+	animation: color-change 7s infinite;
+	/* Change the duration as needed */
+}
