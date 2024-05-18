@@ -100,10 +100,9 @@
 				-->
 
 				<div class="header-text">
-					<h1>Aware Agent</h1>
-					<h2><strong id="changing-text">AI</strong> for <strong id="changing-text">autonomous decision-making</strong>
-						at
-						<strong id="changing-text">scale</strong>.
+					<h1 id="changing-text-auto">Aware Agent</h1>
+					<h2><strong id="changing-text">AI</strong> for <strong id="changing-text-auto">autonomous</strong><strong
+							id="changing-text"> decision-making</strong>
 					</h2>
 				</div>
 			</div>
@@ -137,8 +136,7 @@
 							into existing business tools, enhancing operational efficiency and productivity. This solution is
 							particularly
 							tailored for mid to large-sized enterprises looking to optimize their internal workflows with
-							<strong>autonomous
-								decision-making</strong>.
+							<strong>autonomous decision-making</strong>.
 						</p>
 					</div>
 				</div>
@@ -312,6 +310,14 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var video = document.querySelector('.video-background');
+			video.onended = function () {
+				this.play();
+			};
+		});
+	</script>
 
 </body>
 
