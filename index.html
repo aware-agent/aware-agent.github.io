@@ -327,6 +327,44 @@
 		});
 	</script>
 
+	<!-- Cookie Consent Banner -->
+	<div id="cookieConsentContainer"
+		style="display: none; position: fixed; bottom: 0; width: 100%; background-color: #000; color: #fff; text-align: center; padding: 10px;">
+		This site uses cookies to offer you a better browsing experience. <a href="YOUR_PRIVACY_POLICY_LINK">Learn more</a>.
+		<button onclick="hideCookieBanner()">OK</button>
+	</div>
+	<script>
+		function getCookie(name) {
+			let cookie = {};
+			document.cookie.split(';').forEach(function (el) {
+				let [k, v] = el.split('=');
+				cookie[k.trim()] = v;
+			})
+			return cookie[name];
+		}
+
+		function hideCookieBanner() {
+			document.getElementById("cookieConsentContainer").style.display = "none";
+			document.cookie = "cookieConsent=true; max-age=86400; path=/"; // Expires in 1 day
+		}
+
+		window.onload = function () {
+			if (!getCookie("cookieConsent")) {
+				document.getElementById("cookieConsentContainer").style.display = "block";
+			}
+		}
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CV6RVNFWJ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-0CV6RVNFWJ');
+	</script>
+
 </body>
 
 </html>
