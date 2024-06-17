@@ -3909,3 +3909,27 @@ input, select, textarea {
 #changing-text-auto {
 		animation: color-change-auto 12s infinite, glow 12s infinite;
 }
+
+@keyframes highlight-word {
+	0% {
+			color: #03070d;
+			opacity: 1;
+	}
+	100% {
+			color: white;
+			opacity: 1;
+	}
+}
+
+#highlight-text {
+	animation: none;
+}
+
+#highlight-text strong {
+	animation: none;
+}
+
+#highlight-text span {
+	display: inline-block;
+	opacity: 0;
+}
