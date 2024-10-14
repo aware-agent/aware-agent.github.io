@@ -2990,7 +2990,7 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
 	}
 
 		.spotlight .content {
@@ -3869,36 +3869,19 @@ input, select, textarea {
 	}
 }
 
-@keyframes color-change-auto {
-
-	0%,
-	100% {
-		color: white;
-	}
-
-	50% {
-		color: #03070d;
-		/* Dark blue instead of black for a softer transition */
-	}
-}
 @keyframes glow {
-
-	0%,
-	100% {
-		text-shadow: 0 0 4px #03070d, 0 0 8px #03070d, 0 0 12px #03070d, 0 0 16px #03070d;
-	}
-
-	50% {
-		text-shadow:
-			-1px 0 4px #63fffc,
-			/* Leftmost shadow in cyan */
-			1px 0 8px #63fffc,
-			/* Rightmost shadow in cyan */
-			-2px 0 12px white,
-			/* Second layer of shadow moving left in white */
-			2px 0 16px white;
-		/* Second layer of shadow moving right in white */
-	}
+    0%, 100% {
+        text-shadow: 
+            0 0 8px #a7d4e6,
+            0 0 16px #a7d4e6,
+            0 0 32px #a7d4e6,
+    }
+    50% {
+        text-shadow:
+            0 0 4px #0e5c5f,
+            0 0 8px #0e5c5f,
+            0 0 16px #0e5c5f;
+    }
 }
 
 #changing-text {
@@ -3907,7 +3890,7 @@ input, select, textarea {
 }
 
 #changing-text-auto {
-		animation: color-change-auto 12s infinite, glow 12s infinite;
+	animation: glow 12s infinite;
 }
 
 @keyframes highlight-word {
